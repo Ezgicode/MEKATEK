@@ -1,0 +1,118 @@
+
+Git versiyon kontrol sistemi 
+
+# Temel terminal komutları
+cd <directory>    # Dizin değiştirme
+ls                # Dosya ve dizinleri listeleme
+mkdir <name>      # Yeni bir dizin oluşturma
+ls -l             # Dizini ayrıntılı olarak listeleme 
+ls -la            # Gizli dosyaları da göstererek ayrıntılı liste
+mkdir yeni_dizin  # Dizin oluşturma
+cd yeni_dizin     # Dizine geçiş yapma
+pwd               # Mevcut dizini gösterme
+rm dosya.txt      # Dosya silme
+rmdir eski_dizin  # Dizin silme
+
+Kullanıcı Adı ve Email Girmek
+
+git config --global user.name "Adınız Soyadınız"
+git config --global user.email "mail@example.com"
+
+
+ Git Init ve Status
+
+git init   # Git deposu başlatma
+git status # Projedeki değişiklikleri kontrol etme
+
+git add . # Tüm dosyaları commit'e ekleme
+git commit -m "İlk commit mesajı"# Commit yapma
+git log # Commit geçmişini görüntüleme
+
+
+.gitignore dosyası, belirli dosyaların ve dizinlerin Git tarafından görmezden gelinmesini sağlar.
+ Bu dosyaları ve dizinleri görmezden gelir
+
+
+git log -n 1 HEAD           # HEAD'in konumunu gösterme
+
+
+git checkout <commit-hash>  # HEAD'i belirli bir commit'e taşıma
+
+git branch yeni-branch      # Yeni bir branch oluşturma
+
+git checkout yeni-branch   Diğer branche geçiş yapma
+
+git checkout ana-branch  # Ana branche geçiş yapma
+
+git merge yeni-branch   # Yeni branch'i ana branche merge etme
+
+git merge --ff yeni-branch # Fast forward ile branch'leri birleştirme
+
+git merge branch1       # İki branch'i birleştirme (merge conflict oluşturma)
+
+git merge --continue    # Çözüldükten sonra commit yapma
+
+git stash              # Değişiklikleri stash'e ekleme
+
+git stash list        # Stash listesini görüntüleme
+
+git stash apply     # Stash'ten değişiklikleri geri getirme
+
+git stash pop    # Stash'ten değişiklikleri geri getirip stash'i temizleme
+
+git checkout <commit-hash> # Geçmişteki bir commit'e geçiş yapma 
+
+git checkout branch-adi # Belirli bir branch'e geçiş yapma
+
+git checkout -b yeni-branch <commit-hash> # Yeni bir branch oluşturup üzerine checkout yapma
+
+git reset --hard <commit-hash> # Belirli bir commit'e geri dönme 
+
+git revert <commit-hash>        # Belirli bir commit'i geri alma (yeni bir commit oluşturur)
+
+git diff <commit1> <commit2>   # İki commit arasındaki farkı gösterme
+
+git diff HEAD    # Çalışma dizini ile en son commit arasındaki farkı gösterme
+
+git checkout feature-branch   # Aktif branch'i diğer bir branch ile rebase etme
+
+git checkout feature-branch  # Feature branch'e geçiş yapma
+
+git rebase master            # Master branch ile rebase etme
+
+git rebase --continue        # Çözümleri işaretledikten sonra rebase işlemini tamamlama
+
+
+
+GitHub, dağıtılmış bir versiyon kontrol sistemidir ve aynı zamanda proje işbirliği platformudur. Geliştiricilere kodlarını paylaşma, işbirliği yapma ve proje takibi yapma imkanı sunar.
+
+ Git Push
+Yerel bir depodaki değişiklikleri GitHub'a yükleme:
+
+# Var olan bir repo ile ilişkilendirme
+git remote add origin https://github.com/kullanici-adi/repo-adi.git
+
+# Yerel değişiklikleri commit ve push yapma
+git commit -m "Değişiklikleri ekle"
+git push -u origin master
+
+Pull Request
+Başka bir dalda yaptığınız değişiklikleri ana dala entegre etmek için Pull Request oluşturma.
+Create Pull Request
+
+Fetch ve Pull
+Uzaktaki değişiklikleri getirme (fetch), yerel dala çekme (pull):
+
+git fetch originbbbbbbb # Uzaktaki değişiklikleri git e getirme
+git pull origin master # Yerel dala çekme (ve birleştirme)
+
+ Clone
+Bir GitHub deposunu yerel makinenize klonlama:
+git clone https://github.com/kullanici-adi/repo-adi.git
+
+Fork
+Başka bir kullanıcının deposunu kendi GitHub hesabınıza çatallama  Fork
+
+Private
+Özel (private) bir GitHub deposu oluşturma:
+"Repository visibility" i "Private"

@@ -1,0 +1,574 @@
+
+
+Makine Dili
+Bilgisayarın anlayabileceği düşük seviyeli makine dili
+Derleyici ve Yorumlayıcı
+Programlama dillerinin bilgisayar tarafından nasıl çalıştırıldığı ve yorumlandığı
+Kaynak Program
+Python gibi yüksek seviyeli programlama dillerinde yazılan kaynak kodun ne olduğu ve nasıl yazıldığı 
+Çalıştırılabilir Dosya
+Kaynak kodun bilgisayar tarafından nasıl çalıştırılabilir bir formata dönüştürüldüğü
+Değişkenler
+Değişkenler, bilgisayar programlamada bilgi saklamak için kullanılan etiketli kutucuklardır. Örneğin, sayi = 10 ifadesinde, sayi bir değişkendir ve içinde 10 değerini taşır.
+Değişken İsimlendirme
+Değişkenlere verilen isimler belirli kurallara uymalıdır. İsimlendirme, kodunuzun anlaşılırlığını artırır. Örneğin, kullaniciAdi gibi açıklayıcı isimler tercih edilmelidir.
+Değişkenleri Birbirine Aktarma
+Değişkenler arasında bilgi aktarabilirsiniz. Örneğin, x = 5 ve y = x ifadelerinde, y değişkenine x'in değeri atanır.
+Operatorler
+Matematik ve mantık operatörleri, değişkenler arasında matematiksel veya mantıksal işlemler gerçekleştirmenizi sağlar.
+ Tipleri
+Temel veri tipleri: Tam sayılar (int), ondalık sayılar (float), metin dizileri (string) gibi.
+ Tipi Dönüşümleri
+Farklı veri tipleri arasında dönüşüm yapma, örneğin bir tam sayıyı ondalık sayıya çevirme.
+Açıklama Satırı
+Kodunuzu daha anlaşılır kılmak için açıklama satırları eklemek.
+Veri Giriş Komutu
+Kullanıcıdan veri almak için kullanılan giriş komutları.
+
+format()
+String içinde değişkenleri yerine koymak için kullanılan format() fonksiyonu.
+Karşılaştırma Operatörleri
+Değişkenler arasında karşılaştırma yapmak için kullanılan operatörler. Örneğin, == (eşit), != (eşit değil), > (büyük), < (küçük) gibi.
+Mantıksal Operatörler
+Çeşitli karşılaştırma ifadelerini birleştirmek veya tersine çevirmek için kullanılan operatörler. Örneğin, and, or, not.
+if Komutu
+Belirli bir koşulun doğru olup olmadığını kontrol etmek ve buna göre belirli bir bloğu çalıştırmak için kullanılan if komutu.
+if else Komutu
+Bir koşulun doğru olup olmadığını kontrol etmek ve koşul doğruysa bir bloğu, yanlışsa başka bir bloğu çalıştırmak için kullanılan if-else komutu.
+Döngüler (Loops)                                                                                   
+Belirli bir işlemi tekrar etmek için kullanılan döngülerin tanıtımı.
+in/not in Operatörleri
+Bir elemanın bir listede olup olmadığını kontrol etmek için kullanılan in ve not in operatörleri.
+range Fonksiyonu
+Belirli bir aralıktaki sayıları oluşturmak için kullanılan range() fonksiyonu.
+for Döngüsü
+Belirli bir bloğu belirli bir sayıda veya belirli bir liste üzerinde tekrar etmek için kullanılan for döngüsü.
+while Döngüsü
+Belirli bir koşul doğru olduğu sürece bir bloğu tekrar etmek için kullanılan while döngüsü.
+break Komutu
+Döngüyü belirli bir koşul sağlandığında sonlandırmak için kullanılan break komutu.
+continue Komutu
+Döngü içindeki mevcut iterasyonu atlamak ve bir sonraki iterasyona geçmek için kullanılan continue komutu.
+ Fonksiyonlar
+Fonksiyon
+def topla(a, b):
+    sonuc = a + b
+    print(f"{a} + {b} = {sonuc}")
+topla(3, 5)
+Fonksiyon Kullanma Sebepleri
+# Fonksiyon kullanmadan
+sayi1 = 10
+sayi2 = 5
+sonuc = sayi1 + sayi2
+print(sonuc)
+# Fonksiyon kullanarak
+def topla(a, b):
+    return a + b
+sonuc = topla(10, 5)
+print(sonuc)
+  Fonksiyon Tanımlama
+def selamla():
+    print("Merhaba!")
+selamla()
+Fonksiyon Parametreleri (Girdileri)
+def kare_al(x):
+    return x ** 2
+sonuc = kare_al(4)
+print(sonuc)
+Varsayılan Değer
+def selamla(isim="Arkadaş"):
+    print(f"Merhaba, {isim}!")
+selamla()  # Merhaba, Arkadaş!
+selamla("Ahmet")  # Merhaba, Ahmet!
+Fonksiyon Çıktıları (return)
+def topla(a, b):
+    return a + b
+sonuc = topla(3, 7)
+print(sonuc)
+_Fonksiyonda Global (Genel) ve Yerel (Lokal ) Değişkenler
+global_degisken = 10
+def fonksiyon():
+    lokal_degisken = 5
+    print(global_degisken + lokal_degisken)
+fonksiyon()
+_İçeriği Olmayan Fonksiyon
+def mesaj_goster():
+    print("Bu bir mesajdır.")
+mesaj_goster()
+Fonksiyon Kısaltma (Lambda)
+kare_al = lambda x: x ** 2
+print(kare_al(3))
+_Özyinelemeli (Rekürsif) Fonksiyonlar
+def faktoriyel_hesapla(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * faktoriyel_hesapla(n - 1)
+print(faktoriyel_hesapla(5))
+
+
+mesaj = "Merhaba, Dünya!"
+İndis (İndex)
+mesaj = "Merhaba, Dünya!"
+print(mesaj[0])  # M
+print(mesaj[7])  # D
+İki Stringi Birleştirme
+ad = "John"
+soyad = "Doe"
+tam_isim = ad + " " + soyad
+print(tam_isim)  # John Doe
+Stringi Bölme
+mesaj = "Python Programlama"
+parca = mesaj[7:15]
+print(parca)  # Programl
+String Güncelleme/Değiştirme
+mesaj = "Hello, World!"
+yeni_mesaj = mesaj.replace("Hello", "Merhaba")
+print(yeni_mesaj)  # Merhaba, World!
+String Silme
+mesaj = "Python Programlama"
+yeni_mesaj = mesaj[:6] + mesaj[13:]
+print(yeni_mesaj)  # Pythonlama
+Stringe For Döngüsü İle Erişim
+mesaj = "Python"
+for harf in mesaj:
+    print(harf)
+Stringi Listeye Dönüştürme
+mesaj = "Python"
+liste = list(mesaj)
+print(liste)  # ['P', 'y', 't', 'h', 'o', 'n']
+String Uzunluğu Bulma
+mesaj = "Python"
+uzunluk = len(mesaj)
+print(uzunluk)  # 6
+String Karşılaştırma
+kelime1 = "Python"
+kelime2 = "python"
+if kelime1.lower() == kelime2.lower():
+    print("Kelimeler eşit.")
+else:
+    print("Kelimeler eşit değil.")
+Sitring İçerisine Değişken Değeri Yazma
+isim = "John"
+mesaj = f"Merhaba, {isim}!"
+print(mesaj)  # Merhaba, John!
+String Ters Çevirme
+mesaj = "Python"
+ters_mesaj = mesaj[::-1]
+print(ters_mesaj)  # nohtyP
+_tring Harfleri Büyük/Küçük Dönüştürme
+mesaj = "Python"
+buyuk_mesaj = mesaj.upper()
+kucuk_mesaj = mesaj.lower()
+print(buyuk_mesaj)  # PYTHON
+print(kucuk_mesaj)  # python
+String İçerisinde Başka String Arama
+mesaj = "Python Programlama"
+arama = "Program"
+if arama in mesaj:
+    print(f"{arama} bulundu.")
+else:
+    print(f"{arama} bulunamadı.")
+
+ Diziler ve Listeler
+Dizi, aynı türden birden çok öğeyi içinde barındıran bir veri yapısıdır.
+
+# Dizisiz hali
+not1 = 80
+not2 = 90
+not3 = 75
+
+# Dizili hali
+notlar = [80, 90, 75]
+Listeler
+Liste, Python'da kullanılan dinamik bir veri yapısıdır.
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+Liste Elemanlarına Erişme
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+print(ogrenciler[1])  # Ayse
+Listedeki Bir Elemanın İndis (Sıra) Numarasını Öğrenme
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+index_ayse = ogrenciler.index("Ayse")
+print(index_ayse)  # 1
+Liste Dilimleme
+ogrenciler = ["Ali", "Ayse", "Mehmet", "Fatma", "Can"]
+secilenler = ogrenciler[1:3]
+print(secilenler)  # ["Ayse", "Mehmet"]
+Listeye Eleman Ekleme
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+ogrenciler.append("Zeynep")
+print(ogrenciler)
+# ["Ali", "Ayse", "Mehmet", "Zeynep"]
+Listenin Eleman Sayısını Öğrenme
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+sayi = len(ogrenciler)
+print(sayi)  # 3
+İki Listeyi Birleştirme
+ogrenciler1 = ["Ali", "Ayse"]
+ogrenciler2 = ["Mehmet", "Zeynep"]
+tum_ogrenciler = ogrenciler1 + ogrenciler2
+print(tum_ogrenciler)
+# ["Ali", "Ayse", "Mehmet", "Zeynep"]
+Listeyi Ters Çevirme
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+ogrenciler.reverse()
+print(ogrenciler)
+# ["Mehmet", "Ayse", "Ali"]
+_Listenin En Küçük ve En Büyük Elemanını Öğrenme
+notlar = [80, 90, 75, 95]
+en_kucuk = min(notlar)
+en_buyuk = max(notlar)
+print(en_kucuk, en_buyuk)
+Stringi Listeye Dönüştürme
+metin = "Python"
+liste = list(metin)
+print(liste)
+# ['P', 'y', 't', 'h', 'o', 'n']
+Listeden Eleman Silme
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+ogrenciler.remove("Ayse")
+print(ogrenciler)
+# ["Ali", "Mehmet"]
+Listede Arama
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+if "Ayse" in ogrenciler:
+    print("Ayse bulundu.")
+else:
+    print("Ayse bulunamadı.")
+Liste Elemanlarını Sıralama
+notlar = [80, 90, 75, 95]
+notlar.sort()
+print(notlar)
+# [75, 80, 90, 95]
+_enumerate() Fonksiyonu
+ogrenciler = ["Ali", "Ayse", "Mehmet"]
+for index, ogrenci in enumerate(ogrenciler):
+    print(f"{index+1}. ogrenci: {ogrenci}")
+Listeden Yığın Oluşturma
+yigin = []
+yigin.append(1)
+yigin.append(2)
+yigin.append(3)
+print(yigin)
+# [1, 2, 3]
+Listeden Kuyruk Oluşturma
+kuyruk = []
+kuyruk.insert(0, 1)
+kuyruk.insert(0, 2)
+kuyruk.insert(0, 3)
+print(kuyruk)
+# [3, 2, 1]
+
+ Sözlükler
+sozluk = {"anahtar1": "deger1", "anahtar2": "deger2"}
+Sözlük (Dict) Fonksiyonları
+
+# Sözlük oluşturma
+ogrenci = {"ad": "Ali", "yas": 15, "notlar": [80, 90, 75]}
+
+# Değerlere erişim
+print(ogrenci["ad"])
+
+# Anahtarları listeleme
+anahtarlar = list(ogrenci.keys())
+print(anahtarlar)
+
+# Değerleri listeleme
+degerler = list(ogrenci.values())
+print(degerler)
+_Küme (Set)
+
+kume = {1, 2, 3, 4, 5}
+kume.add(6)
+print(kume)  # {1, 2, 3, 4, 5, 6}
+Demet (Tuple)
+demet = (1, 2, 3)
+print(demet[0])  # 1
+
+. Nesne ve Sınıf
+Sınıf (Class) Tanımlama
+class Araba:
+    marka = "Toyota"
+    model = "Corolla"
+
+    def bilgileri_goster(self):
+        print(f"Marka: {self.marka}, Model: {self.model}")
+  self ve pass
+self anahtar kelimesi, bir metotun kendisine ait olduğu sınıfın örneğini ifade eder. pass ise bir bloğu boş bırakmak için kullanılır.
+
+_Nesne (Object) Tanımlama
+
+araba1 = Araba()
+araba2 = Araba()
+Nesne Özellikleri
+araba1.yil = 2022
+araba2.renk = "Mavi"
+Nesne Metotları
+araba1.bilgileri_goster()
+araba2.bilgileri_goster()
+_Sınıf Metotları ve Normal Fonksiyonların Farkı
+
+class Matematik:
+    @staticmethod
+    def topla(x, y):
+        return x + y
+
+sonuc = Matematik.topla(3, 5)
+init() Metodu
+__init__ metodu, bir sınıf örneği oluşturulduğunda otomatik olarak çağrılan bir özel bir metottur.
+
+class Ogrenci:
+    def __init__(self, ad, soyad):
+        self.ad = ad
+        self.soyad = soyad
+Bir Nesnenin Metot ve Özellikleri
+
+ogrenci = Ogrenci("Ahmet", "Yilmaz")
+print(ogrenci.ad)
+Sınıf Yapıları ile Yeni Veri Tipleri Tanımlama
+
+class Renk:
+    def __init__(self, ad, kod):
+        self.ad = ad
+        self.kod = kod
+
+class Araba:
+    def __init__(self, marka, renk):
+        self.marka = marka
+        self.renk = renk
+
+    def bilgileri_goster(self):
+        print(f"Marka: {self.marka}, Renk: {self.renk.ad}")
+_Kalıtım Kavramı
+
+class Sekiller:
+    def __init__(self, tur):
+        self.tur = tur
+
+    def bilgileri_goster(self):
+        print(f"Tür: {self.tur}")
+
+class Dikdortgen(Sekiller):
+    def __init__(self, uzunluk, genislik):
+        super().__init__("Dikdörtgen")
+        self.uzunluk = uzunluk
+        self.genislik = genislik
+_Modül Kavramı
+
+# matematik.py
+def topla(x, y):
+    return x + y
+import Şekilleri
+# Şekil 1
+import matematik
+sonuc = matematik.topla(3, 5)
+# Şekil 2
+from matematik import topla
+sonuc = topla(3, 5)
+name Özelliği
+if __name__ == "__main__":
+    print("Bu dosya direkt çalıştırıldı.")
+else:
+    print("Bu dosya başka bir dosya içinden import edildi.")
+
+import math
+
+karekok = math.sqrt(16)
+print(karekok)
+_Matematiksel İşlem Örnek
+import random
+
+sayi = random.randint(1, 100)
+print(sayi)
+Rastgele Modülü Metotları
+
+import random
+
+liste = [1, 2, 3, 4, 5]
+random.shuffle(liste)
+print(liste)
+Rastgele Sayı Üretme
+
+import random
+
+sayi = random.randint(1, 100)
+tahmin = int(input("Tahmininizi girin: "))
+
+if tahmin == sayi:
+    print("Tebrikler, doğru tahmin!")
+else:
+    print(f"Üzgünüm, doğru sayı {sayi} idi.")
+Taş Kağıt Makas
+
+import random
+secenekler = ["Taş", "Kağıt", "Makas"]
+bilgisayar_secimi = random.choice(secenekler)
+kullanicinin_secimi = input("Taş, Kağıt ya da Makas? ")
+
+if kullanicinin_secimi in secenekler:
+    if kullanicinin_secimi == bilgisayar_secimi:
+        print("Berabere!")
+    elif (kullanicinin_secimi == "Taş" and bilgisayar_secimi == "Makas") or \
+         (kullanicinin_secimi == "Kağıt" and bilgisayar_secimi == "Taş") or \
+         (kullanicinin_secimi == "Makas" and bilgisayar_secimi == "Kağıt"):
+        print("Kazandınız!")
+    else:
+        print("Kaybettiniz!")
+else:
+    print("Geçersiz seçim.")
+
+
+def soru_sor():
+    sayi1 = random.randint(1, 10)
+    sayi2 = random.randint(1
+
+import turtle
+# Turtle nesnesi oluştur
+t = turtle.Turtle()
+
+# İleri git
+t.forward(100)
+
+# Ekranı kapat
+turtle.done()
+Bu kod, Turtle ekranında bir çizgi çizmeye başlar.
+
+
+Doğru Çizimi ve Doğrusal Hareket
+
+import turtle
+t = turtle.Turtle()
+# İleri git
+t.forward(100)
+# Sağa dön
+t.right(90)
+# İleri git
+t.forward(100)
+# Ekranı kapat
+turtle.done()
+Bu örnek, bir kare çizer.
+
+Farklı Turtle Simgeleri
+
+import turtle
+# Turtle nesnesi oluştur
+t = turtle.Turtle()
+
+# Farklı bir simge seç
+t.shape("turtle")
+
+# İleri git
+t.forward(100)
+
+# Ekranı kapat
+turtle.done()
+Bu örnekte turtle'ın simgesini değiştiriyoruz.
+
+Üçgen Kare
+
+import turtle
+t = turtle.Turtle()
+# Üçgen çizimi
+for _ in range(3):
+    t.forward(100)
+    t.right(120)
+
+# Kare çizimi
+for _ in range(4):
+    t.forward(100)
+    t.right(90)
+
+# Ekranı kapat
+turtle.done()
+Bu örnek, bir üçgen ve bir kare çizer.
+
+Renk Komutları
+
+import turtle
+t = turtle.Turtle()
+# Kırmızı renkte çizim
+t.color("red")
+t.forward(100)
+# Yeşil renkte çizim
+t.color("green")
+t.forward(100)
+# Ekranı kapat
+turtle.done()
+Bu örnekte renk değiştirmeyi öğreniyoruz.
+Renk Tablosu
+
+import turtle
+t = turtle.Turtle()
+# Renk tablosu
+renkler = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+# Renkleri sırayla kullanarak çizim
+for renk in renkler:
+    t.color(renk)
+    t.forward(50)
+# Ekranı kapat
+turtle.done()
+Bu örnekte renklerle çizim yapmayı öğreniyoruz.
+Daire Çizimi
+
+import turtle
+t = turtle.Turtle()
+# Daire çizimi
+t.circle(100)
+# Ekranı kapat
+turtle.done()
+Bu örnekte daire çizmeyi öğreniyoruz.
+Çokgen (Poligon) Çizimi
+
+import turtle
+t = turtle.Turtle()
+# Kullanıcıdan kenar sayısı al
+kenar_sayisi = int(turtle.numinput("Çokgen", "Kaç kenarlı bir çokgen çizmek istersiniz?", default=6, minval=3))
+# Çokgen çizimi
+for _ in range(kenar_sayisi):
+    t.forward(100)
+    t.left(360 / kenar_sayisi)
+# Ekranı kapat
+turtle.done()
+Bu örnekte kullanıcıdan alınan kenar sayısına göre çokgen çizmeyi öğreniyoruz.
+
+ Veri Girişi için İletişim (Diyalog) Kutularını Kullanma
+
+import turtle
+import tkinter.simpledialog
+t = turtle.Turtle()
+# Kullanıcıdan isim al
+isim = tkinter.simpledialog.askstring("İsim", "Adınız nedir?")
+# İleri git
+t.forwrd(100)
+# İsim yazdır
+t.write(f"Merhaba, {isim}!", align="left", font=("Arial", 12, "normal"))
+# Ekranı kapat
+turtle.done()
+Bu örnekte, kullanıcıdan bir isim alıp, ekrana yazdırmayı öğreniyoruz.
+
+Çerçeve İçine Resim Yerleştirmek
+
+import turtle
+import tkinter.simpledialog
+t = turtle.Turtle()
+# Kullanıcıdan resim dosyası adı al
+dosya_adı = tkinter.simpledialog.askstring("Resim", "Resim dosyasının adını girin (örneğin: resim.jpg)")
+# Çerçeve içine resim yerleştirme
+turtle.bgpic(dosya_adı)
+# Ekranı kapat
+turtle.done()
+Bu örneke, kullanıcıdan bir resim dosyasının adını alıp, Turtle ekranına yerleştirme yapmayı öğreniyoruz.
+
+_Turk Bayragı
+
+import turtle
+t = turtle.Turtle()
+# Dikdörtgen çizimi (bayrak rengi için)
+t.color("red")
+t.begin_fill()
+for _ in range(2):
+    t.forward(
+
+
+
+

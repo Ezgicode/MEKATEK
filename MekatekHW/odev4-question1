@@ -1,0 +1,50 @@
+from typing import List, Tuple
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[Tuple[int, int]]:
+        if not (2 <= len(nums) <= 10**4):
+            raise ValueError("Invalid length for the 'nums' list.")
+
+        for num in nums:
+            if not (-10**9 <= num <= 10**9):
+                raise ValueError("Invalid value in the 'nums' list.")
+
+        if not (-10**9 <= target <= 10**9):
+            raise ValueError("Invalid value for 'target'.")
+
+        result = set()
+        num_dict = {}
+
+        for i, num in enumerate(nums):
+            complement = target - num
+
+            if complement in num_dict:
+                result.add((num_dict[complement], i))
+
+            num_dict[num] = i
+
+        return list(result)
+
+# Örnek kullanım:
+solution = Solution()
+
+# Yeni örnekler
+nums_list = [
+    ([1, 5, 6, 2], 7),
+    ([0, 4, 3, 0], 0),
+    ([-1, -2, -3, -4, -5], -8),
+    ([3, 2, 4], 6),
+    ([3, 3], 6),
+    ([-1, 0, 1, 2, -1, -4], 0),
+    ([1, 1, 1, 1], 2),
+    ([1, 2, 3, 4, 5], 8),
+    ([0, 0, 0, 0, 0], 0)
+]
+
+# Tüm örnekleri çalıştır ve sonuçları birleştir
+all_results = []
+for nums, target in nums_list:
+    result = solution.twoSum(nums, target)
+    all_results.extend(result)
+
+print(all_results)

@@ -1,0 +1,47 @@
+import random
+
+def generate_random_nums(length, min_val, max_val):
+    return [random.randint(min_val, max_val) for _ in range(length)]
+
+def three_sum(nums):
+    nums.sort()  # Dizi sıralanmalı
+    result = []
+
+    for i in range(len(nums) - 2):
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue  # İki üst üçlüyle aynı sayıları atlamak için
+
+        left, right = i + 1, len(nums) - 1
+        target = -nums[i]
+
+        while left < right:
+            current_sum = nums[left] + nums[right]
+
+            if current_sum == target:
+                result.append([nums[i], nums[left], nums[right]])
+
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1
+
+                left += 1
+                right -= 1
+            elif current_sum < target:
+                left += 1
+            else:
+                right -= 1
+
+    return result
+
+# Her seferinde farklı random girdiler oluştur
+nums_length = 3000
+nums_min_val = -105
+nums_max_val = 105
+nums = generate_random_nums(nums_length, nums_min_val, nums_max_val)
+
+# Test
+result = three_sum(nums)
+print(f"Input: nums = {nums}")
+print(f"Output: {result}")
+

@@ -1,0 +1,25 @@
+def text_to_numbers(text):
+    result = []
+
+    for char in text:
+        if char == ' ':
+            result.append(0)
+        elif char.isalpha():
+            char_code = ord(char.lower()) - ord('a') + 2
+            if char_code > 9:
+                result.extend([char_code // 10, char_code % 10])
+            else:
+                result.append(char_code)
+        elif char.isdigit():
+            result.extend([int(digit) for digit in char])
+
+    return result
+
+# Kullanıcıdan giriş al
+user_input = input("Bir metin girin: ")
+
+# Metni tamsayı dizisine çevir
+result = text_to_numbers(user_input)
+
+# Çıktıyı göster
+print(f"Output: {result}")
